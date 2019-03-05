@@ -9,6 +9,7 @@ addons:
     - git
     - build-essential
     - automake
+    - libtool
     - python-dev
     - gettext
     - swig
