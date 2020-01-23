@@ -14835,8 +14835,10 @@ def autostart(reason, **kwargs):
 			InitWebIF()
 		if os.path.islink(resolveFilename(SCOPE_LIBDIR, "libpython2.5.so.1.0")) == False:
 			try:
-				os.symlink("/usr/lib/libpython2.6.so.1.0","/usr/lib/libpython2.5.so.1.0")
-				os.symlink("/usr/lib64/libpython2.6.so.1.0","/usr/lib64/libpython2.5.so.1.0")
+				if os.path.isdir("/usr/lib64"):
+					os.symlink("/usr/lib64/libpython2.6.so.1.0","/usr/lib64/libpython2.5.so.1.0")
+				else:
+					os.symlink("/usr/lib/libpython2.6.so.1.0","/usr/lib/libpython2.5.so.1.0")
 				L4log("create Link")
 			except:
 				L4log("Error create Link")
