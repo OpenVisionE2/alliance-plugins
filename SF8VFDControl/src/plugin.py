@@ -77,7 +77,7 @@ def vfd_write(text):
 	open("/dev/dbox/oled0", "w").write(text)
 	
 def vfd_text_out(text):
-	led7ctrl = subprocess.Popen([resolveFilename(SCOPE_PLUGINS, "SystemPlugins/SF8VFDControl/led7ctrl')], stdin=subprocess.PIPE)
+	led7ctrl = subprocess.Popen([resolveFilename(SCOPE_PLUGINS, "SystemPlugins/SF8VFDControl/led7ctrl")], stdin=subprocess.PIPE)
 	index = [ 'a', 'b', 'c', 'd' ] # 'a' means the first digit, 'b' is second, ...
 	cmd = ""
 	for i in range(4): # display up to 4 character. todo: check short string.
