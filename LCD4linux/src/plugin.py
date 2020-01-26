@@ -110,7 +110,7 @@ from mutagen.mp3 import MP3
 from mutagen.easyid3 import EasyID3
 from mutagen.flac import FLAC
 from module import L4Lelement
-from Tools.Directories import resolveFilename, SCOPE_PLUGINS, SCOPE_LIBDIR
+from Tools.Directories import resolveFilename, SCOPE_PLUGINS
 
 L4LElist = L4Lelement()
 CrashFile="/tmp/L4Lcrash.txt"
@@ -14833,15 +14833,6 @@ def autostart(reason, **kwargs):
 		rmFile(xmlPIC)
 		if LCD4linux.WebIfInitDelay.value == False:
 			InitWebIF()
-		if os.path.islink(resolveFilename(SCOPE_LIBDIR, "libpython2.5.so.1.0")) == False:
-			try:
-				if os.path.isdir("/usr/lib64"):
-					os.symlink("/usr/lib64/libpython2.6.so.1.0","/usr/lib64/libpython2.5.so.1.0")
-				else:
-					os.symlink("/usr/lib/libpython2.6.so.1.0","/usr/lib/libpython2.5.so.1.0")
-				L4log("create Link")
-			except:
-				L4log("Error create Link")
 		setFONT(LCD4linux.Font.value)
 		if os.path.exists(LCD4config) and LCD4linux.L4LVersion.value != Version:
 			L4log("Version changed from",LCD4linux.L4LVersion.value)
