@@ -27,7 +27,6 @@ from Components.ActionMap import ActionMap
 from Components.Label import Label
 
 from GBIpboxLocale import _
-from boxbranding import getImageDistro
 
 class GBIpboxAbout(Screen):
 	skin = """
@@ -42,12 +41,8 @@ class GBIpboxAbout(Screen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 
-		if getImageDistro() in ("openatv"):
-			self.setTitle(_('IPBOX Client About'))
-			about = "IPBOX Client 1.0""\n"
-		else:
-			self.setTitle(_('GBIpbox Client About'))
-			about = "GBIpbox Client 1.0""\n"
+		self.setTitle(_('GBIpbox Client About'))
+		about = "GBIpbox Client 1.0""\n"
 
 		about += "(c) 2014 Impex-Sat Gmbh & Co.KG\n\n"
 		about += "Written by Sandro Cavazzoni <sandro@skanetwork.com>"

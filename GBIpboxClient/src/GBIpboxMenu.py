@@ -36,7 +36,6 @@ from GBIpboxScan import GBIpboxScan
 from GBIpboxAbout import GBIpboxAbout
 from GBIpboxMount import GBIpboxMount
 from GBIpboxLocale import _
-from boxbranding import getImageDistro
 
 from enigma import eTimer
 
@@ -138,10 +137,7 @@ class GBIpboxMenu(Screen, ConfigListScreen):
 		Screen.__init__(self, session)
 		ConfigListScreen.__init__(self, self.list)
 
-		if getImageDistro() in ("openatv"):
-			self.setTitle(_('IPBOX Client'))
-		else:
-			self.setTitle(_('GBIpbox Client'))
+		self.setTitle(_('GBIpbox Client'))
 		
 		self["VKeyIcon"] = Boolean(False)
 		self["text"] = StaticText(_('NOTE: the remote HDD feature require samba installed on server box.'))

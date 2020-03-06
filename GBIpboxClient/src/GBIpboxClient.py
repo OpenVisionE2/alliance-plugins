@@ -44,4 +44,3 @@ def GBIpboxClientAutostart(reason, session=None, **kwargs):
 	
 	mount = GBIpboxMount(session)
 	mount.automount()
-	
