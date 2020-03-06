@@ -7,166 +7,182 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-06 15:48+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/plugin.py:41
 msgid "30 Days"
 msgstr "30 Giorni"
 
-#: ../src/GBIpboxMenu.py:134
-msgid "About"
-msgstr "Informazioni"
-
-#: ../src/GBIpboxMenu.py:164
-msgid "Authentication"
-msgstr "Autenticazione"
-
-#: ../src/GBIpboxMenu.py:131 ../src/GBIpboxMenu.py:230 ../src/GBIpboxWizard.py:175
-msgid "Cancel"
-msgstr "Annulla"
-
-#: ../src/GBIpboxMenu.py:276
-msgid "Cannot download data. Please check your configuration"
-msgstr "Impossibile scaricare i dati. Controllare la configurazione"
-
-#: ../src/GBIpboxMenu.py:231
-msgid "Choose your main device"
-msgstr "Scegli il tuo dispositivo principale"
-
-#: ../src/plugin.py:41
-msgid "Daily"
-msgstr "Giornaliera"
-
-#: ../src/GBIpboxMenu.py:153
-msgid "Do you want to scan for a server?"
-msgstr "Vuoi eseguire una ricerca del server?"
-
-#: ../src/GBIpboxMenu.py:272
-msgid "Download completed"
-msgstr "Download completato"
-
-#: ../src/GBIpboxMenu.py:129 ../src/GBIpboxWizard.py:146
-msgid "GBIpbox Client"
-msgstr ""
-
-#: ../src/GBIpboxAbout.py:44
-msgid "GBIpbox Client About"
-msgstr ""
-
-#: ../src/plugin.py:46
-msgid "GBIpboxClient"
-msgstr ""
-
-#: ../src/plugin.py:58 ../src/plugin.py:64
-msgid "Gigablue IPBox network client"
-msgstr ""
-
-#: ../src/GBIpboxMenu.py:162
-msgid "HTTP port"
-msgstr "Porta HTTP"
-
-#: ../src/GBIpboxMenu.py:161
-msgid "Host"
-msgstr "Host"
-
-#: ../src/plugin.py:70
-msgid "IPBox wizard"
-msgstr ""
-
-#: ../src/GBIpboxMenu.py:234
-msgid "No devices found"
-msgstr "Nessun dispositivo trovato"
-
-#: ../src/GBIpboxMenu.py:167
-msgid "Password"
-msgstr "Password"
-
-#: ../src/GBIpboxMenu.py:196
-msgid "Please wait while download is in progress.\\nNOTE: If you have parental control enabled on remote box, the local settings will be overwritten."
-msgstr "Attendere, download in corso.\\nNOTA: Se il controllo parentale è abilitato sul dispositivo remoto, le configurazioni locali verranno sovrascritte"
-
-#: ../src/GBIpboxMenu.py:210
-msgid "Please wait while scan is in progress.\\nThis operation may take a while"
-msgstr "Attendere, scansione in corso.\\nL'operazione potrebbe richiedere molto tempo."
-
-#: ../src/GBIpboxMenu.py:172
-msgid "Repeat how often"
-msgstr "Frequenza di ripetizione"
-
-#: ../src/GBIpboxMenu.py:132
-msgid "Save"
-msgstr "Salva"
-
-#: ../src/GBIpboxMenu.py:133
-msgid "Scan"
-msgstr "Scansiona"
-
-#: ../src/GBIpboxMenu.py:169
-msgid "Schedule sync"
-msgstr "Sincronizzazione pianificata"
-
-#: ../src/GBIpboxMenu.py:163
-msgid "Streaming port"
-msgstr "Porta di streaming"
-
-#: ../src/GBIpboxMenu.py:171
-msgid "Time of sync to start"
-msgstr "Ora di inizio della sincronizzazione"
-
-#: ../src/GBIpboxMenu.py:168
-msgid "Use remote HDD"
-msgstr "Utilizza hard disk remoto"
-
-#: ../src/GBIpboxMenu.py:166
-msgid "Username"
-msgstr "Nome utente"
-
-#: ../src/plugin.py:41
-msgid "Weekly"
-msgstr "Settimanale"
-
-#: ../src/gbipboxwizard.xml
 msgid "Abort this Wizard"
 msgstr "Termina questo Wizard"
 
-#: ../src/gbipboxwizard.xml
-msgid "Cannot download data! Sorry, we can't configure your ipbox right now.\nPlease press OK to close this Wizard."
-msgstr "Impossibile scaricare i dati! Spiacente, non possiamo configurare il tuo ipbox ora\nPremi OK per chiudere questo Wizard."
+msgid "About"
+msgstr "Informazioni"
 
-#: ../src/gbipboxwizard.xml
-msgid "No devices found! Sorry, we can't configure your ipbox right now.\nPlease press OK to close this Wizard."
-msgstr "Nessun dispositivo trovato! Spiacente, non possiamo configurare il tuo ipbox ora\nPremi OK per chiudere questo Wizard."
+msgid "Authentication"
+msgstr "Autenticazione"
 
-#: ../src/gbipboxwizard.xml
-msgid "Please wait while scan is in progress.\nThis operation may take a while."
-msgstr "Attendere, scansione in corso.\nL'operazione potrebbe richiedere molto tempo."
+msgid "Cancel"
+msgstr "Annulla"
 
-#: ../src/gbipboxwizard.xml
+msgid ""
+"Cannot download data! Sorry, we can't configure your ipbox right now.\n"
+"Please press OK to close this Wizard."
+msgstr ""
+"Impossibile scaricare i dati! Spiacente, non possiamo configurare il tuo ipbox ora\n"
+"Premi OK per chiudere questo Wizard."
+
+msgid "Cannot download data. Please check your configuration"
+msgstr "Impossibile scaricare i dati. Controllare la configurazione"
+
+msgid "Choose your main device"
+msgstr "Scegli il tuo dispositivo principale"
+
+msgid "Daily"
+msgstr "Giornaliera"
+
+msgid "Do you want to scan for a server?"
+msgstr "Vuoi eseguire una ricerca del server?"
+
+msgid "Download completed"
+msgstr "Download completato"
+
+msgid "GBIpbox Client"
+msgstr ""
+
+msgid "GBIpbox Client About"
+msgstr ""
+
+msgid "GBIpboxClient"
+msgstr ""
+
+msgid "Gigablue IPBox network client"
+msgstr ""
+
+msgid "HTTP port"
+msgstr "Porta HTTP"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "IPBOX Client"
+msgstr ""
+
+msgid "IPBOX Client About"
+msgstr ""
+
+msgid "IPBox network client"
+msgstr ""
+
+msgid "IPBox wizard"
+msgstr ""
+
+msgid "NOTE: the remote HDD feature require samba installed on server box."
+msgstr ""
+
+msgid "No devices found"
+msgstr "Nessun dispositivo trovato"
+
+msgid ""
+"No devices found! Sorry, we can't configure your ipbox right now.\n"
+"Please press OK to close this Wizard."
+msgstr ""
+"Nessun dispositivo trovato! Spiacente, non possiamo configurare il tuo ipbox ora\n"
+"Premi OK per chiudere questo Wizard."
+
+msgid "Password"
+msgstr "Password"
+
+#, fuzzy
+msgid ""
+"Please wait while download is in progress.\n"
+"NOTE: If you have parental control enabled on remote box, the local settings will be overwritten."
+msgstr "Attendere, download in corso.\\nNOTA: Se il controllo parentale è abilitato sul dispositivo remoto, le configurazioni locali verranno sovrascritte"
+
+#, fuzzy
+msgid ""
+"Please wait while scan is in progress.\n"
+"This operation may take a while"
+msgstr ""
+"Attendere, scansione in corso.\n"
+"L'operazione potrebbe richiedere molto tempo."
+
+msgid ""
+"Please wait while scan is in progress.\n"
+"This operation may take a while."
+msgstr ""
+"Attendere, scansione in corso.\n"
+"L'operazione potrebbe richiedere molto tempo."
+
+msgid "Repeat how often"
+msgstr "Frequenza di ripetizione"
+
+msgid "Save"
+msgstr "Salva"
+
+msgid "Scan"
+msgstr "Scansiona"
+
 msgid "Scan for a server"
 msgstr "Cerca un server"
 
-#: ../src/gbipboxwizard.xml
-msgid "Thank you for using the wizard. Your ipbox is now configured.\nPlease press OK to continue."
-msgstr "Grazie per aver utilizzato il wizard. Il tuo ipbox è configurato\nPremere OK per continuare."
+msgid "Schedule sync"
+msgstr "Sincronizzazione pianificata"
 
-#: ../src/gbipboxwizard.xml
+msgid "Streaming port"
+msgstr "Porta di streaming"
+
+msgid ""
+"Thank you for using the wizard. Your ipbox is now configured.\n"
+"Please press OK to continue."
+msgstr ""
+"Grazie per aver utilizzato il wizard. Il tuo ipbox è configurato\n"
+"Premere OK per continuare."
+
+msgid "Time of sync to start"
+msgstr "Ora di inizio della sincronizzazione"
+
+msgid "To apply new settings, you need to reboot your STB. Do you want reboot it now?"
+msgstr ""
+
 msgid "Try to download again"
 msgstr "Riprova a scaricare"
 
-#: ../src/gbipboxwizard.xml
 msgid "Try to scan again"
 msgstr "Riesegui la ricerce"
 
-#: ../src/gbipboxwizard.xml
-msgid "Welcome.\n\nThis Wizard will help you to configure your ipbox."
-msgstr "Benvenuto.\n\nQuesto Wizard ti aiuterà a configurare il tuo ipbox."
+msgid "Use remote HDD"
+msgstr "Utilizza hard disk remoto"
 
-#: ../src/gbipboxwizard.xml
-msgid "Your ipbox is not configured.\nPlease press OK to close this Wizard."
-msgstr "Il tuo ipbox non è configurato.\nPremi Ok per chiudere questo Wizard."
+#, fuzzy
+msgid "Use remote timers"
+msgstr "Utilizza hard disk remoto"
+
+msgid "Username"
+msgstr "Nome utente"
+
+msgid "Weekly"
+msgstr "Settimanale"
+
+msgid ""
+"Welcome.\n"
+"\n"
+"This Wizard will help you to configure your ipbox."
+msgstr ""
+"Benvenuto.\n"
+"\n"
+"Questo Wizard ti aiuterà a configurare il tuo ipbox."
+
+msgid ""
+"Your ipbox is not configured.\n"
+"Please press OK to close this Wizard."
+msgstr ""
+"Il tuo ipbox non è configurato.\n"
+"Premi Ok per chiudere questo Wizard."
