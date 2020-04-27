@@ -368,7 +368,7 @@ class PlayerService:
 		if data.startswith("http://www.youtube.com"):
 			print("youtube start!!")
 			tmp = data.split("?")
-			print(tmp # ['http://www.youtube.com/watch', 'v=BpThu778qB4&feature=related'])
+			print(tmp) # ['http://www.youtube.com/watch', 'v=BpThu778qB4&feature=related']
 			service = self.session.nav.getCurrentlyPlayingServiceReference()
 			if len(tmp) == 2 and tmp[0] == "http://www.youtube.com/watch":
 				tmp = tmp[1].split("&")
