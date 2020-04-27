@@ -372,10 +372,10 @@ class PlayerService:
 			service = self.session.nav.getCurrentlyPlayingServiceReference()
 			if len(tmp) == 2 and tmp[0] == "http://www.youtube.com/watch":
 				tmp = tmp[1].split("&")
-				print(tmp # ['v=BpThu778qB4', 'feature=related'])
+				print(tmp) # ['v=BpThu778qB4', 'feature=related']
 				if len(tmp) == 2:
 					tmp = tmp[0].split("=")
-					print(tmp # ['v', 'BpThu778qB4'])
+					print(tmp) # ['v', 'BpThu778qB4']
 					if len(tmp) == 2 and tmp[0] == "v":
 						wb_lock()
 						player = PlayerLauncher()
