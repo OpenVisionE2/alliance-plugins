@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import division, print_function
+from __future__ import print_function
 # for localized messages
 from . import _
 from Screens.Screen import Screen
@@ -386,7 +386,7 @@ class TranscodingSetup(Screen,ConfigListScreen):
 		self.list = []
 		self.onChangedEntry = [ ]
 		ConfigListScreen.__init__(self, self.list, session = self.session, on_change = self.changedEntry)
-		self.setupMode = "Normal" # Normal // Advanced
+		self.setupMode = "Normal" # Normal / Advanced
 		self.encoder = None
 		self.automode = None
 		self.createSetup()
@@ -427,7 +427,7 @@ class TranscodingSetup(Screen,ConfigListScreen):
 		if encoder is not None:
 			self.automode = None
 			if checkSupportAdvanced() and hasattr(config.plugins.transcodingsetup.encoder[int(encoder)], "automode"):
-				self.automode = getConfigListEntry(_("Auto set Framerate // Bitrate"), config.plugins.transcodingsetup.encoder[int(encoder)].automode)
+				self.automode = getConfigListEntry(_("Auto set Framerate / Bitrate"), config.plugins.transcodingsetup.encoder[int(encoder)].automode)
 
 			if self.automode is not None:
 				self.list.append(self.automode)

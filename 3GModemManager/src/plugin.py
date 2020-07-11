@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import division, print_function
+from __future__ import print_function
 from Plugins.Plugin import PluginDescriptor
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
@@ -1158,6 +1158,6 @@ def main(session, **kwargs):
 	session.open(ModemManager)
                                                            
 def Plugins(**kwargs):            
-	return [PluginDescriptor(name=_("3G // 4G Modem Manager"), description="management 3g modem", where = PluginDescriptor.WHERE_PLUGINMENU, fnc=main),
+	return [PluginDescriptor(name=_("3G/4G Modem Manager"), description="Manage 3G/4G modems", where = PluginDescriptor.WHERE_PLUGINMENU, fnc=main),
 		PluginDescriptor(where = [PluginDescriptor.WHERE_AUTOSTART], fnc = autostart)]
 

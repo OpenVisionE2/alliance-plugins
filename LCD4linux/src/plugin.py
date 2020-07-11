@@ -371,9 +371,9 @@ ProgressType = [("1", _("only Progress Bar")),
 ("8", _("with Current 00:00")), ("81", _("with Current 00:00 (Size 1.5)")), ("82", _("with Current 00:00 (Size 2)")),
 ("9", _("with Current 00:00 (above)")), ("91", _("with Current 00:00 (above/Size 1.5)")), ("92", _("with Current 00:00 (above/Size 2)")),
 ("A", _("with Current 00:00 (below)")), ("A1", _("with Current 00:00 (below/Size 1.5)")), ("A2", _("with Current 00:00 (below/Size 2)")),
-("B", _("with Percent Minutes // Total (above)")), ("B1", _("with Percent Minutes // Total (above/Size 1.5)")), ("B2", _("with Percent Minutes // Total (above/Size 2)")),
+("B", _("with Percent Minutes / Total (above)")), ("B1", _("with Percent Minutes / Total (above/Size 1.5)")), ("B2", _("with Percent Minutes / Total (above/Size 2)")),
 ("C", _("with absolute Endtime")), ("C1", _("with absolute Endtime (Size 1.5)")), ("C2", _("with absolute Endtime (Size 2)")),
-("D", _("with Minutes Total // Endtime (above)")), ("D1", _("with Minutes Total // Endtime (above/Size 1.5)")), ("D2", _("with Minutes Total // Endtime (above/Size 2)")),
+("D", _("with Minutes Total / Endtime (above)")), ("D1", _("with Minutes Total / Endtime (above/Size 1.5)")), ("D2", _("with Minutes Total / Endtime (above/Size 2)")),
 ]
 now = localtime()
 begin = mktime((
@@ -505,9 +505,9 @@ LCD4linux.LCDBild3 = ConfigText(default="", fixed_size=False, visible_width=50)
 LCD4linux.LCDColor1 = ConfigSelection(choices = Farbe, default="black")
 LCD4linux.LCDColor2 = ConfigSelection(choices = Farbe, default="black")
 LCD4linux.LCDColor3 = ConfigSelection(choices = Farbe, default="black")
-LCD4linux.LCDRefresh1 = ConfigSelection(choices = [("0", _("always")), ("1", _("1 // min"))], default="0")
-LCD4linux.LCDRefresh2 = ConfigSelection(choices = [("0", _("always")), ("1", _("1 // min"))], default="0")
-LCD4linux.LCDRefresh3 = ConfigSelection(choices = [("0", _("always")), ("1", _("1 // min"))], default="0")
+LCD4linux.LCDRefresh1 = ConfigSelection(choices = [("0", _("always")), ("1", _("1 / min"))], default="0")
+LCD4linux.LCDRefresh2 = ConfigSelection(choices = [("0", _("always")), ("1", _("1 / min"))], default="0")
+LCD4linux.LCDRefresh3 = ConfigSelection(choices = [("0", _("always")), ("1", _("1 / min"))], default="0")
 LCD4linux.LCDTFT = ConfigSelection(choices =  [("ABC", _("On+Media+Standby")), ("A", _("On")), ("B", _("Media")), ("C", _("Standby"))], default="ABC")
 LCD4linux.xmlLCDType = ConfigSelection(choices = xmlLCDType, default="132x64")
 LCD4linux.xmlLCDColor = ConfigSelection(choices = [("8", _("8bit - grayscale/color")), ("32", _("32bit - color"))], default="8")
@@ -4987,7 +4987,7 @@ class LCDdisplayMenu(Screen):
 	def SetList(self):
 		self.list = []
 		self.list.append((_("Load Active Config-File"), "LoadConfig", ""))
-		self.list.append((_("Load Defaults // Empty Config"), "LoadDefault", ""))
+		self.list.append((_("Load Defaults / Empty Config"), "LoadDefault", ""))
 		self.list.append((_("Save Config to File... (%s)") % LCD4linux.ConfigPath.value, "SaveToConfig", ""))
 		Cdir = glob.glob(os.path.join(LCD4linux.ConfigPath.value,"*.lcd"))
 		Cdir.sort()
@@ -9188,7 +9188,7 @@ class UpdateStatus(Screen):
 						L4logE("Restart at Off-doublekey",key)
 						self.Refresh="1"
 						self.restartTimer()
-					elif LCD4linux.KeyScreen.value[-1:] != "l" and key == self.k: # FORWARD // INFO
+					elif LCD4linux.KeyScreen.value[-1:] != "l" and key == self.k: # FORWARD / INFO
 						ScreenTime = 9999
 						NextScreen(True)
 						LCD4linux.ScreenActive.value = ScreenActive[0]

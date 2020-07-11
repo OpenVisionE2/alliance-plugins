@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import division
 ##############################################################################
 #                          <<< Tuner Server >>>
 #
@@ -15,7 +14,7 @@ from __future__ import division
 ##############################################################################
 
 # This plugin implement the Tuner Server feature included.
-# Author: meo // rossi2000
+# Author: meo/rossi2000
 # Please Respect credits
 
 from Plugins.Plugin import PluginDescriptor
