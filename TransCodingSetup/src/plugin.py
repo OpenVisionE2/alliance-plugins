@@ -357,7 +357,7 @@ class TranscodingSetup(Screen,ConfigListScreen):
 		self.setup_title = _("Transcoding Setup")
 		self.setTitle(self.setup_title)
 
-		if model in ("vusolo2","x2plus") or platform == "gb7356"::
+		if model in ("vusolo2","x2plus") or platform == "gb7356":
 			TEXT = _("Transcoding and PIP are mutually exclusive.")
 		else:
 			TEXT = _("2nd transcoding and PIP are mutually exclusive.")
