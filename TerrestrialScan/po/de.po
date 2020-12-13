@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2-oe-alliance-plugins 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-23 13:30+0330\n"
+"POT-Creation-Date: 2018-07-30 19:14+0200\n"
 "PO-Revision-Date: 2018-10-14 22:29+0200\n"
 "Last-Translator: Manfred Aabye <openmanniland@gmx.de>\n"
 "Language-Team: none\n"
@@ -18,17 +18,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2\n"
 
-msgid "All"
-msgstr ""
-
-msgid "Australia generic"
-msgstr ""
+msgid "- ONID to search"
+msgstr "- ONID Suche"
 
 msgid "Automatic"
 msgstr "Automatisch"
 
-#, fuzzy
-msgid "Bandplan"
+msgid "Band"
 msgstr "Band"
 
 msgid "Cannot allocate the demuxer"
@@ -46,28 +42,11 @@ msgstr "Konnte den Tuner nicht erreichen"
 msgid "Cannot retrieve Resource Manager instance"
 msgstr "Kann nicht die Resource-Manager-Instanz abrufen"
 
-msgid "Channel list ID"
-msgstr ""
-
 msgid "Clear before scan"
 msgstr "Vor dem Suchlauf löschen"
 
-msgid "Country"
-msgstr ""
-
-#, fuzzy
-msgid "Create separate radio bouquet"
-msgstr "Terrestrisches Kanalliste erstellen"
-
 msgid "Create terrestrial bouquet"
 msgstr "Terrestrisches Kanalliste erstellen"
-
-#, fuzzy
-msgid "Create terrestrial.xml file"
-msgstr "Terrestrisches Kanalliste erstellen"
-
-msgid "Enter channel list ID used in your area. If you are not sure enter zero."
-msgstr ""
 
 msgid "Enter the original network ID (ONID) of the multiplexes you wish to restrict the search to. UK terrestrial television normally ONID \"9018\"."
 msgstr "Geben Sie die ursprüngliche Netzwerk-ID (ONID) der Multiplexe ein, auf die Sie die Suche beschränken möchten. BRITISCHES terrestrisches Fernsehen normalerweise ONID \"9018\"."
@@ -75,16 +54,11 @@ msgstr "Geben Sie die ursprüngliche Netzwerk-ID (ONID) der Multiplexe ein, auf 
 msgid "Exit"
 msgstr "Abbrechen"
 
-#, fuzzy, python-format
+#, python-format
 msgid "Found %d unique transponder"
-msgstr "%d gefundene eindeutige Transponder"
-
-#, fuzzy, python-format
-msgid "Found %d unique transponders"
-msgstr "%d gefundene eindeutige Transponder"
-
-msgid "From XML"
-msgstr ""
+msgid_plural "Found %d unique transponders"
+msgstr[0] "%d gefundene eindeutige Transponder"
+msgstr[1] "%d gefundene eindeutige Transponder"
 
 msgid "If you select \"yes\" all stored terrestrial channels will be deleted before starting the current search."
 msgstr "Wenn Sie \"Ja\" auswählen werden alle gespeicherten terrestrischen Kanäle vor dem Suchlauf gelöscht."
@@ -92,16 +66,10 @@ msgstr "Wenn Sie \"Ja\" auswählen werden alle gespeicherten terrestrischen Kan�
 msgid "If you select \"yes\" and LCNs are found in the NIT, the scan will create a bouquet of terrestrial channels in LCN order and add it to the bouquet list."
 msgstr "Wenn Sie \"Ja\" wählen und LCNs im NIT gefunden werden, wird der Scan einen Liste von terrestrischen Kanälen in LCN Reihenfolge erstellen und in die Kanalliste aufgenommen."
 
-msgid "If you select \"yes\" and radio services are fond these will be place in a separate bouquet. Otherwise TV and radio services will be placed in a combined bouquet."
-msgstr ""
-
 msgid "If you select \"yes\" the scan will only save channels that are not encrypted; \"no\" will find encrypted and non-encrypted channels."
 msgstr ""
 "Wenn Sie \"Ja\" auswählen werden nur unverschlüsselte Kanäle gesucht,\n"
 "bei \"Nein\" werden verschlüsselte und unverschlüsselte Kanäle gesucht."
-
-msgid "LCN Descriptor"
-msgstr ""
 
 msgid "MakeBouquet"
 msgstr "Kanalliste erstellen"
@@ -109,8 +77,7 @@ msgstr "Kanalliste erstellen"
 msgid "Making bouquet..."
 msgstr "Kanalliste erstellen..."
 
-#, fuzzy
-msgid "Most transmitters in European countries only have TV channels in the UHF band. Select \"From XML\" to access bandplans that are preloaded on the device."
+msgid "Most transmitters in European countries only have TV channels in the UHF band."
 msgstr "Die meisten Sender in den europäischen Ländern haben nur TV-Kanäle im UHF-Band."
 
 msgid "No frequencies to search"
@@ -125,23 +92,16 @@ msgstr "Keine Transponder zum lesen"
 msgid "No valid NIM found for terrestrial"
 msgstr "Kein gültiger Tuner für DVB-T"
 
-#, fuzzy
-msgid "ONID to search"
-msgstr "- ONID Suche"
-
 msgid "Only free scan"
 msgstr "Nur freie Kanäle suchen"
-
-msgid "Period of time to wait for the tuner to stabalise before taking a signal quality reading. 2 seconds is good for most hardware but some may require longer."
-msgstr ""
-
-#, fuzzy, python-format
-msgid "Reading %s MHz (ch %s)"
-msgstr "Lese Kanal %s"
 
 #, python-format
 msgid "Reading SI tables on %s MHz"
 msgstr "Lese SI Tabellen auf %s MHz"
+
+#, python-format
+msgid "Reading channel %s"
+msgstr "Lese Kanal %s"
 
 msgid "Reading streams"
 msgstr "Lese Streams"
@@ -149,14 +109,15 @@ msgstr "Lese Streams"
 msgid "Really close without saving settings?"
 msgstr "Wirklich beenden ohne zu speichern?"
 
-msgid "Region"
-msgstr ""
-
 msgid "Restrict search to single ONID"
 msgstr "Suche auf Single ONID beschränken"
 
 msgid "Scan"
 msgstr "Suchlauf"
+
+#, python-format
+msgid "Scanning channel %s"
+msgstr "Durchsuche Kanal %s"
 
 msgid "Scanning for active transponders"
 msgstr "Aktive Transponder suchen"
@@ -164,28 +125,13 @@ msgstr "Aktive Transponder suchen"
 msgid "Select \"Yes\" to restrict the search to multiplexes that belong to a single original network ID (ONID). Select \"No\" to search all ONIDs."
 msgstr "Wählen Sie \"Ja\", um die Suche auf Multiplexe zu beschränken, die zu einer einzigen ursprünglichen Netzwerk-ID (ONID) gehören. Wählen Sie \"Nein\", um alle ONIDs zu suchen."
 
-msgid "Select \"yes\" to create a custom terrestrial.xml file and install it in /etc/enigma2 for system scans to use."
-msgstr ""
-
 msgid "Select a tuner that is configured for terrestrial scans. \"Automatic\" will pick the highest spec available tuner."
 msgstr ""
 "Wählen Sie einen Tuner, der für den terrestrischen Suchlauf konfiguriert ist.\n"
 "\"Automatisch\", den Tuner mit dem besten Empfangssignal wählen."
 
-msgid "Select the LCN descriptor used in your area. 0x83 is the default DVB standard descriptor. 0x87 is used in some Scandinavian countries."
-msgstr ""
-
-msgid "Select your country. If not available select 'all'."
-msgstr ""
-
-msgid "Select your region. If not available change 'Country' to 'all' and select one of the default alternatives."
-msgstr ""
-
 msgid "Selected tuner is not cofigured"
 msgstr "Ausgewählter Tuner ist nicht konfiguriert"
-
-msgid "Signal quality stabisation time (secs)"
-msgstr ""
 
 msgid "Starting scanner"
 msgstr "Starte Suchlauf"
@@ -211,10 +157,6 @@ msgstr "Tuner"
 
 #, python-format
 msgid "Tuning %s MHz"
-msgstr "Tuning %s MHz"
-
-#, fuzzy, python-format
-msgid "Tuning %s MHz (ch %s)"
 msgstr "Tuning %s MHz"
 
 msgid "UHF Europe"
