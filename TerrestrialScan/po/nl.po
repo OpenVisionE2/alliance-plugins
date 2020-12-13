@@ -213,18 +213,3 @@ msgstr "UHF Europa"
 
 msgid "UHF/VHF Europe"
 msgstr "UHF/VHF Europa"
-
-#~ msgid "- ONID to search"
-#~ msgstr "- ONID naar zoeken"
-
-#~ msgid "Band"
-#~ msgstr "Band"
-
-#~ msgid "Most transmitters in European countries only have TV channels in the UHF band."
-#~ msgstr "De meeste uitzendingen in Europa vinden plaats in de UHF-band."
-
-#~ msgid "Reading channel %s"
-#~ msgstr "Leest kanaal %s"
-
-#~ msgid "Scanning channel %s"
-#~ msgstr "Scant kanaal %s"
