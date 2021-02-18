@@ -1671,7 +1671,7 @@ class IceTVLogin(Screen, IceTVUIBase):
                                       " favourite shows, keyword notifications,"
                                       " new series broadcasts, and our recommendations.\n\n"
                                       "Everything in one place. Simply select something new and press Record.\n\n"
-                                      "IceTV's smartphone and tablet apps can be downloaded by scanning the code above."))
+                                      "IceTV's smartphone and tablet apps can be downloaded by scanning the code above.")
             self["qrcode"].show()
             config.plugins.icetv.configured.value = True
             config.plugins.icetv.last_update_time.value = 0
