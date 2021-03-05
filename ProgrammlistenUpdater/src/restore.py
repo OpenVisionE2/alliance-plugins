@@ -102,7 +102,7 @@ class PU_Restore(Screen, ConfigListScreen):
         Console().ePopen('rm -f /etc/enigma2/*.radio')
         Console().ePopen('rm -f /etc/enigma2/*.tv')
         # Restore settingslist
-        Console().ePopen('tar -xzvf %s/Settings/enigma2/%s -C /' % (Directory, self.filename)
+        Console().ePopen('tar -xzvf %s/Settings/enigma2/%s -C /' % (Directory, self.filename))
         # Reload settingslist
         eDVBDB.getInstance().reloadServicelist()
         eDVBDB.getInstance().reloadBouquets()

@@ -38,7 +38,7 @@ def InstallSettings(name, link, date):
             if not os.path.exists(Directory + '/Settings/tmp/setting'):
                 Console().ePopen('mkdir -p %s/Settings/tmp/setting' % Directory)
                 try:
-                    Console().ePopen('unzip %s/Settings/tmp/listE2_unzip/*.zip -d %s/Settings/tmp/setting' % (Directory, Directory)
+                    Console().ePopen('unzip %s/Settings/tmp/listE2_unzip/*.zip -d %s/Settings/tmp/setting' % (Directory, Directory))
                 except:
                     print("ERROR unzip %s.zip", name)
         return False
