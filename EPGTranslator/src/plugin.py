@@ -10,8 +10,7 @@ from . import _
 EPGTrans_vers = "2.03-release"
 
 from Components.ActionMap import ActionMap
-from Components.config import config, configfile, ConfigSubsection,
- ConfigSelection, ConfigInteger, ConfigBoolean, getConfigListEntry
+from Components.config import config, configfile, ConfigSubsection, ConfigSelection, ConfigInteger, ConfigBoolean, getConfigListEntry
 from Components.ConfigList import ConfigListScreen
 from Components.Label import Label
 from Components.Language import language
@@ -19,8 +18,7 @@ from Components.Pixmap import Pixmap
 from Components.ScrollLabel import ScrollLabel
 from Components.ServiceEventTracker import ServiceEventTracker
 from Components.Sources.StaticText import StaticText
-from enigma import eEPGCache, eServiceReference, getDesktop,
- iPlayableService, iServiceInformation
+from enigma import eEPGCache, eServiceReference, getDesktop, iPlayableService, iServiceInformation
 from Plugins.Plugin import PluginDescriptor
 from Screens.EventView import EventViewBase
 from Screens.InfoBar import InfoBar
