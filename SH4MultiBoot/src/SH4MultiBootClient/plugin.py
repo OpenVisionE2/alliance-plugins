@@ -15,6 +15,7 @@ from Tools.Directories import fileExists, pathExists
 import os
 from skin import parseColor
 from Plugins.Plugin import PluginDescriptor
+from Components.Console import Console
 
 PLUGINVERSION = '10.2'
 
@@ -48,9 +49,7 @@ class SH4MultiBootImageChoose(Screen):
         self.list = []
         try:
             pluginpath = '/usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBootClient'
-            f = open(pluginpath + '/.sh4multiboot_location', 'r')
-            mypath = f.readline().strip()
-            f.close()
+            mypath = open(pluginpath + '/.sh4multiboot_location', 'r').readline().strip()
         except:
             mypath = '/media/hdd'
 
@@ -62,7 +61,7 @@ class SH4MultiBootImageChoose(Screen):
         self['device_icon'].instance.setPixmap(png)
         device = '/media/sh4multiboot'
         dev_free = dev_free_space = def_free_space_percent = ''
-        rc = os.system('df > /tmp/ninfo.tmp')
+        rc = Console().ePopen('df > /tmp/ninfo.tmp')
         if fileExists('/tmp/ninfo.tmp'):
             f = open('/tmp/ninfo.tmp', 'r')
             for line in f.readlines():
@@ -123,10 +122,8 @@ class SH4MultiBootImageChoose(Screen):
     def boot(self):
         self.mysel = self['config'].getCurrent()
         if self.mysel:
-            out = open('/media/sh4multiboot/SH4MultiBootI/.sh4multiboot', 'w')
-            out.write(self.mysel)
-            out.close()
-            os.system('rm -f /tmp/.sh4multireboot')
+            open('/media/sh4multiboot/SH4MultiBootI/.sh4multiboot', 'w').write(self.mysel)
+            Console().ePopen('rm -f /tmp/.sh4multireboot')
             message = _('Are you sure you want to boot:\n') + self.mysel + ' now ?'
             ybox = self.session.openWithCallback(self.boot2, MessageBox, message, MessageBox.TYPE_YESNO)
             ybox.setTitle(_('Boot Confirmation'))
@@ -135,10 +132,10 @@ class SH4MultiBootImageChoose(Screen):
 
     def boot2(self, yesno):
         if yesno:
-            os.system('touch /tmp/.sh4multireboot')
-            os.system('reboot -p')
+            Console().ePopen('touch /tmp/.sh4multireboot')
+            Console().ePopen('reboot -p')
         else:
-            os.system('touch /tmp/.sh4multireboot')
+            Console().ePopen('touch /tmp/.sh4multireboot')
             self.session.open(MessageBox, _('Image will be booted after the next receiver reboot.'), MessageBox.TYPE_INFO)
 
     def up(self):
@@ -156,13 +153,11 @@ class SH4MultiBootImageChoose(Screen):
 
 
 def main(session, **kwargs):
-    f = open('/usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBootClient/.sh4multiboot_location', 'r')
-    mypath = f.readline().strip()
-    f.close()
+    open('/usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBootClient/.sh4multiboot_location', 'r').readline().strip()
     if not pathExists('/media/sh4multiboot'):
         os.mkdir('/media/sh4multiboot')
     cmd = 'mount ' + mypath + ' /media/sh4multiboot'
-    os.system(cmd)
+    Console().ePopen(cmd)
     f = open('/proc/mounts', 'r')
     for line in f.readlines():
         if line.find('/media/sh4multiboot') != -1:
@@ -170,9 +165,9 @@ def main(session, **kwargs):
             break
 
     cmd = 'mount ' + line + ' ' + mypath
-    os.system(cmd)
+    Console().ePopen(cmd)
     cmd = 'mount ' + mypath + ' /media/sh4multiboot'
-    os.system(cmd)
+    Console().ePopen(cmd)
     session.open(SH4MultiBootImageChoose)
 
 
@@ -181,9 +176,8 @@ def menu(menuid, **kwargs):
     if os.path.exists(filename):
         pass
     else:
-        f = open(filename, 'w')
-        f.write("576i")
-        f.close()
+        print("[SH4MultiBoot] Write to /etc/videomode2")
+        open(filename, 'w').write("576i")
 
     if menuid == 'mainmenu':
         return [(_('SH4MultiBoot Client'),

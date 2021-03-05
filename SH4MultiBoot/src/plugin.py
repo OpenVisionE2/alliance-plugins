@@ -20,6 +20,7 @@ from Tools.Directories import fileExists, pathExists
 import os
 from skin import parseColor
 from Plugins.Plugin import PluginDescriptor
+from Components.Console import Console
 
 PLUGINVERSION = '10.2'
 
@@ -101,7 +102,7 @@ class SH4MultiBootInstallation(Screen):
 
     def myclose2(self, message):
         self.session.open(MessageBox, message, MessageBox.TYPE_INFO)
-        os.system('reboot -p')
+        Console().ePopen('reboot -p')
         self.close()
 
     def checkReadWriteDir(self, configele):
@@ -166,7 +167,7 @@ class SH4MultiBootInstallation(Screen):
     def install2(self, yesno):
         if yesno:
             cmd2 = 'mkdir -p /media/sh4multiboot;mount ' + self.mysel + ' /media/sh4multiboot'
-            os.system(cmd2)
+            Console().ePopen(cmd2)
             if fileExists('/proc/mounts'):
                 fileExists('/proc/mounts')
                 f = open('/proc/mounts', 'r')
@@ -174,20 +175,16 @@ class SH4MultiBootInstallation(Screen):
                     if line.find(self.mysel):
 		        mntdev = line.split(' ')[0]
                 f.close()
-                mntid = os.system('blkid -s UUID -o value ' + mntdev + '>/usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBoot/bin/install')
+                mntid = Console().ePopen('blkid -s UUID -o value %s>/usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBoot/bin/install' % mntdev)
 
-            cmd = 'mkdir -f ' + self.mysel + 'SH4MultiBootI;mkdir -p ' + self.mysel + 'SH4MultiBootUpload'
-            os.system(cmd)
-            os.system('cp /usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBoot/bin/sh4multiinit /sbin/sh4multiinit')
-            os.system('chmod 777 /sbin/sh4multiinit;chmod 777 /sbin/init;ln -sfn /sbin/sh4multiinit /sbin/init')
-            os.system('mv /etc/init.d/volatile-media.sh /etc/init.d/volatile-media.sh.back')
-            out2 = open('/media/sh4multiboot/SH4MultiBootI/.sh4multiboot', 'w')
-            out2.write('Flash')
-            out2.close()
-            out = open('/usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBoot/.sh4multiboot_location', 'w')
-            out.write(self.mysel)
-            out.close()
-            os.system('cp /usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBoot/.sh4multiboot_location /etc/sh4multi/')
+            cmd = 'mkdir -p ' + self.mysel + 'SH4MultiBootI;mkdir -p ' + self.mysel + 'SH4MultiBootUpload'
+            Console().ePopen(cmd)
+            Console().ePopen('cp /usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBoot/bin/sh4multiinit /sbin/sh4multiinit')
+            Console().ePopen('chmod 777 /sbin/sh4multiinit;chmod 777 /sbin/init;ln -sfn /sbin/sh4multiinit /sbin/init')
+            Console().ePopen('mv /etc/init.d/volatile-media.sh /etc/init.d/volatile-media.sh.back')
+            open('/media/sh4multiboot/SH4MultiBootI/.sh4multiboot', 'w').write('Flash')
+            open('/usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBoot/.sh4multiboot_location', 'w').write(self.mysel)
+            Console().ePopen('cp /usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBoot/.sh4multiboot_location /etc/sh4multi/')
             image = getImageDistro()
             if fileExists('/etc/image-version'):
                 if 'build' not in image:
@@ -241,9 +238,7 @@ class SH4MultiBootImageChoose(Screen):
         self.list = []
         try:
             pluginpath = '/usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBoot'
-            f = open(pluginpath + '/.sh4multiboot_location', 'r')
-            mypath = f.readline().strip()
-            f.close()
+            mypath = open(pluginpath + '/.sh4multiboot_location', 'r').readline().strip()
         except:
             mypath = '/media/hdd'
 
@@ -255,7 +250,7 @@ class SH4MultiBootImageChoose(Screen):
         self['device_icon'].instance.setPixmap(png)
         device = '/media/sh4multiboot'
         dev_free = dev_free_space = def_free_space_percent = ''
-        rc = os.system('df > /tmp/ninfo.tmp')
+        rc = Console().ePopen('df > /tmp/ninfo.tmp')
         if fileExists('/tmp/ninfo.tmp'):
             f = open('/tmp/ninfo.tmp', 'r')
             for line in f.readlines():
@@ -297,9 +292,7 @@ class SH4MultiBootImageChoose(Screen):
         self['label11'].instance.setForegroundColor(parseColor(color))
         self['free_space_progressbar'].instance.setForegroundColor(parseColor(color))
         try:
-            f2 = open('/media/sh4multiboot/SH4MultiBootI/.sh4multiboot', 'r')
-            mypath2 = f2.readline().strip()
-            f2.close()
+            mypath2 = open('/media/sh4multiboot/SH4MultiBootI/.sh4multiboot', 'r').readline().strip()
         except:
             mypath2 = 'Flash'
 
@@ -316,9 +309,7 @@ class SH4MultiBootImageChoose(Screen):
 
                     f.close()
         elif fileExists('/media/sh4multiboot/SH4MultiBootI/.Flash'):
-            f = open('/media/sh4multiboot/SH4MultiBootI/.Flash', 'r')
-            image = f.readline().strip()
-            f.close()
+            image = open('/media/sh4multiboot/SH4MultiBootI/.Flash', 'r').readline().strip()
         image = ' [' + image + ']'
         self.list.append('Flash' + image)
         self['label6'].setText(mypath)
@@ -344,10 +335,8 @@ class SH4MultiBootImageChoose(Screen):
     def boot(self):
         self.mysel = self['config'].getCurrent()
         if self.mysel:
-            out = open('/media/sh4multiboot/SH4MultiBootI/.sh4multiboot', 'w')
-            out.write(self.mysel)
-            out.close()
-            os.system('rm -f /tmp/.sh4multireboot')
+            open('/media/sh4multiboot/SH4MultiBootI/.sh4multiboot', 'w').write(self.mysel)
+            Console().ePopen('rm -f /tmp/.sh4multireboot')
             message = _('Are you sure you want to boot:\n') + self.mysel + ' now?'
             ybox = self.session.openWithCallback(self.boot2, MessageBox, message, MessageBox.TYPE_YESNO)
             ybox.setTitle(_('Boot Confirmation'))
@@ -356,27 +345,23 @@ class SH4MultiBootImageChoose(Screen):
 
     def boot2(self, yesno):
         if yesno:
-            os.system('touch /tmp/.sh4multireboot')
-            os.system('reboot -p')
+            Console().ePopen('touch /tmp/.sh4multireboot')
+            Console().ePopen('reboot -p')
         else:
-            os.system('touch /tmp/.sh4multireboot')
+            Console().ePopen('touch /tmp/.sh4multireboot')
             self.session.open(MessageBox, _('Image will be booted after the next receiver reboot.'), MessageBox.TYPE_INFO)
 
     def remove(self):
         self.mysel = self['config'].getCurrent()
         if self.mysel:
-            f = open('/media/sh4multiboot/SH4MultiBootI/.sh4multiboot', 'r')
-            mypath = f.readline().strip()
-            f.close()
+            mypath = open('/media/sh4multiboot/SH4MultiBootI/.sh4multiboot', 'r').readline().strip()
             try:
                 if mypath == self.mysel:
                     self.session.open(MessageBox, _('Sorry you cannot delete the image currently booted from.'), MessageBox.TYPE_INFO, 4)
                 if self.mysel.startswith('Flash'):
                     self.session.open(MessageBox, _('Sorry you cannot delete Flash image'), MessageBox.TYPE_INFO, 4)
                 else:
-                    out = open('/media/sh4multiboot/SH4MultiBootI/.sh4multiboot', 'w')
-                    out.write('Flash')
-                    out.close()
+                    open('/media/sh4multiboot/SH4MultiBootI/.sh4multiboot', 'w').write('Flash')
                     message = _('Are you sure you want to delete:\n ') + self.mysel + ' now?'
                     ybox = self.session.openWithCallback(self.remove2, MessageBox, message, MessageBox.TYPE_YESNO)
                     ybox.setTitle(_('Delete Confirmation'))
@@ -625,16 +610,14 @@ class SH4MultiBootImageInstall(Screen, ConfigListScreen):
 
 def main(session, **kwargs):
     if not pathExists('/media/usb'):
-        os.system('mkdir -p /media/usb')
+        Console().ePopen('mkdir -p /media/usb')
     if pathExists('/usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBoot'):
         try:
-            f = open('/usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBoot/.sh4multiboot_location', 'r')
-            mypath = f.readline().strip()
-            f.close()
+            mypath = open('/usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBoot/.sh4multiboot_location', 'r').readline().strip()
             if not pathExists('/media/sh4multiboot'):
                 os.mkdir('/media/sh4multiboot')
             cmd = 'mount ' + mypath + ' /media/sh4multiboot'
-            os.system(cmd)
+            Console().ePopen(cmd)
             f = open('/proc/mounts', 'r')
             for line in f.readlines():
                 if line.find('/media/sh4multiboot') != -1:
@@ -642,9 +625,9 @@ def main(session, **kwargs):
                     break
 
             cmd = 'mount ' + line + ' ' + mypath
-            os.system(cmd)
+            Console().ePopen(cmd)
             cmd = 'mount ' + mypath + ' /media/sh4multiboot'
-            os.system(cmd)
+            Console().ePopen(cmd)
         except:
             pass
 
@@ -664,9 +647,8 @@ def menu(menuid, **kwargs):
     if os.path.exists(filename):
         pass
     else:
-        f = open(filename, 'w')
-        f.write("576i")
-        f.close()
+        print("[SH4MultiBoot] Write to /etc/videomode2")
+        open(filename, 'w').write("576i")
     if pathExists('/usr/lib/enigma2/python/Plugins/Extensions/SH4MultiBoot'):
         if menuid == 'mainmenu':
             return [(_('SH4MultiBoot'),
