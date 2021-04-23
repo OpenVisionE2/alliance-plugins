@@ -1,8 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: LCD4linux\n"
-"POT-Creation-Date: 2020-07-14 06:12+0200\n"
-"PO-Revision-Date: 2021-04-23 10:51+0430\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-23 10:38+0430\n"
+"PO-Revision-Date: 2021-04-23 10:54+0430\n"
 "Last-Translator: 孤独之剑 <haotzyy1970@163.com>\n"
 "Language-Team: 孤独之剑 <haotzyy1970@163.com>\n"
 "Language: zh_CN\n"
@@ -20,12 +21,17 @@ msgstr "%"
 msgid "% + BER"
 msgstr "％+误码率"
 
+#, fuzzy, python-format
+#| msgid "% + Load@1min"
 msgid "% + Load@1min"
 msgstr "％ + 负载@ 1分钟"
 
+#, fuzzy, python-format
+#| msgid "% + Load@5min"
 msgid "% + Load@5min"
 msgstr "％ + 负载@ 5分钟"
 
+#, python-format
 msgid "%d Mails  %d New  %s"
 msgstr "%d 封邮件 %d 封新邮件 %s"
 
@@ -41,6 +47,8 @@ msgstr "%Y.%m.%d - %H:%M"
 msgid "%d.%m.%y %H:%M:%S"
 msgstr "%y.%m.%d %H:%M:%S"
 
+#, fuzzy, python-format
+#| msgid "%s - Current value: %s"
 msgid "%s - Current value: %s"
 msgstr "％s-当前值：％s"
 
@@ -410,6 +418,9 @@ msgstr "- 超时[毫秒]"
 msgid "- Transparency"
 msgstr "- 透明度"
 
+msgid "- Trimmed"
+msgstr ""
+
 msgid "- Tunerinfo"
 msgstr "- 调谐器信息"
 
@@ -427,6 +438,11 @@ msgstr "- 天气类型"
 
 msgid "- Zoom"
 msgstr "- 缩小 -"
+
+#, fuzzy
+#| msgid "- extra Info"
+msgid "- external IP URL"
+msgstr "- 额外信息 ："
 
 msgid "- extra Info"
 msgstr "- 额外信息 ："
@@ -754,14 +770,8 @@ msgstr "模拟+日期+周"
 msgid "Analog+Date+Weekday 2"
 msgstr "模拟+日期+周 2"
 
-msgid "April"
-msgstr "四月"
-
 msgid "Audio/Video"
 msgstr "音频/视频"
-
-msgid "August"
-msgstr "八月"
 
 msgid "Background"
 msgstr "背景"
@@ -780,6 +790,27 @@ msgstr "条形+数值"
 
 msgid "Bitrate"
 msgstr "比特率"
+
+msgid "BlueSound"
+msgstr ""
+
+msgid "BlueSound IP"
+msgstr ""
+
+#, fuzzy
+#| msgid "Sonos Ping Timeout [ms]"
+msgid "BlueSound Ping Timeout [ms]"
+msgstr "休眠Ping超时[毫秒]"
+
+#, fuzzy
+#| msgid "Sonos Play Check"
+msgid "BlueSound Play Check"
+msgstr "休眠播放检查"
+
+#, fuzzy
+#| msgid "Sonos Refresh [s]"
+msgid "BlueSound Refresh [s]"
+msgstr "休眠更新间隔[秒]"
 
 msgid "Box-Skin-LCD"
 msgstr "盒式液晶显示器"
@@ -952,9 +983,6 @@ msgstr "日期无图标"
 msgid "Debug-Logging > /tmp/L4log.txt"
 msgstr "调试日志 > /tmp/L4log.txt"
 
-msgid "December"
-msgstr "十二月"
-
 msgid "Delete"
 msgstr "删除"
 
@@ -1000,11 +1028,11 @@ msgstr "扩展（短）"
 msgid "Extended Description"
 msgstr "扩展描述"
 
+msgid "External IP Address"
+msgstr ""
+
 msgid "Fastmode (2s)"
 msgstr "快速模式（2秒）"
-
-msgid "February"
-msgstr "二月"
 
 msgid "First Quarter"
 msgstr "第一季度"
@@ -1044,9 +1072,6 @@ msgstr "框架 x2"
 
 msgid "Fri"
 msgstr "周五"
-
-msgid "Friday"
-msgstr "星期五"
 
 msgid "FritzCall"
 msgstr "FritzCall"
@@ -1151,20 +1176,11 @@ msgstr "内置Vu + Duo2 LCD 400x240"
 msgid "JPG"
 msgstr "JPG"
 
-msgid "January"
-msgstr "一月"
-
 msgid "Javascript"
 msgstr "Java脚本"
 
 msgid "Javascript no Refresh"
 msgstr "Java脚本无刷新"
-
-msgid "July"
-msgstr "七月"
-
-msgid "June"
-msgstr "六月"
 
 msgid "Key"
 msgstr "按键"
@@ -1232,6 +1248,11 @@ msgstr "液晶显示屏"
 msgid "LCD Off when shutdown"
 msgstr "关机时液晶屏关闭"
 
+#, fuzzy
+#| msgid "LCD4linux"
+msgid "LCD4Linux"
+msgstr "LCD4linux"
+
 msgid "LCD4linux"
 msgstr "LCD4linux"
 
@@ -1259,12 +1280,19 @@ msgstr "第四季度"
 msgid "Line"
 msgstr "行"
 
+#, fuzzy
+#| msgid "Storage-Devices"
+msgid "List of Storage Devices"
+msgstr "存储设备"
+
 msgid "Load Active Config-File"
 msgstr "加载活动配置文件"
 
 msgid "Load Defaults / Empty Config"
 msgstr "加载默认值/清空配置"
 
+#, fuzzy, python-format
+#| msgid "Load File : %s"
 msgid "Load File : %s"
 msgstr "加载文件：％s"
 
@@ -1418,12 +1446,6 @@ msgstr "邮件显示日期"
 msgid "Mail Show Empty Mailboxes"
 msgstr "邮件显示空邮箱"
 
-msgid "March"
-msgstr "三月"
-
-msgid "May"
-msgstr "五月"
-
 msgid "Media"
 msgstr "媒体"
 
@@ -1513,9 +1535,6 @@ msgstr "模块6"
 
 msgid "Mon"
 msgstr "周一"
-
-msgid "Monday"
-msgstr "星期一"
 
 msgid "Month"
 msgstr "月"
@@ -1610,9 +1629,6 @@ msgstr "正常"
 msgid "Normal (5s)"
 msgstr "正常 (5秒)"
 
-msgid "November"
-msgstr "十一月"
-
 msgid "Now/Next"
 msgstr "现在/下一个"
 
@@ -1624,9 +1640,6 @@ msgstr "OSD菜单"
 
 msgid "OSD [display time]"
 msgstr "OSD [显示时间]"
-
-msgid "October"
-msgstr "十月"
 
 msgid "Offline"
 msgstr "离线"
@@ -1657,6 +1670,11 @@ msgstr "室外"
 
 msgid "PNG"
 msgstr "PNG"
+
+#, fuzzy
+#| msgid "Picture Directory Recursive"
+msgid "Parent Directory"
+msgstr "图片目录递归"
 
 msgid "Pearl (or compatible LCD) 240x320"
 msgstr "珍珠（或相容的LCD）240x320"
@@ -1871,15 +1889,13 @@ msgstr "周六"
 msgid "Satellite"
 msgstr "卫星"
 
-msgid "Saturday"
-msgstr "星期六"
-
 msgid "Save"
 msgstr "保存"
 
 msgid "Save Config"
 msgstr "保存配置"
 
+#, python-format
 msgid "Save Config to File... (%s)"
 msgstr "将配置保存到文件... (%s)"
 
@@ -1996,9 +2012,6 @@ msgstr "屏幕开关选择-屏幕"
 
 msgid "Screens used for Changing"
 msgstr "用于更换的屏幕"
-
-msgid "September"
-msgstr "九月"
 
 msgid "Service search first"
 msgstr "服务搜索优先"
@@ -2120,9 +2133,6 @@ msgstr "卡顿电视"
 msgid "Sun"
 msgstr "周日"
 
-msgid "Sunday"
-msgstr "星期日"
-
 msgid "Sunrise"
 msgstr "日出"
 
@@ -2131,6 +2141,11 @@ msgstr "切换帧缓冲区 [如果可能]"
 
 msgid "TV"
 msgstr "电视"
+
+#, fuzzy
+#| msgid "normal (full)"
+msgid "TV (full)"
+msgstr "正常（满）"
 
 msgid "TV+OSD"
 msgstr "电视+ OSD"
@@ -2159,9 +2174,6 @@ msgstr "每个LCD的线程数"
 msgid "Thur"
 msgstr "周四"
 
-msgid "Thursday"
-msgstr "星期四"
-
 msgid "Time"
 msgstr "时间"
 
@@ -2185,9 +2197,6 @@ msgstr "标题"
 
 msgid "Tue"
 msgstr "周二"
-
-msgid "Tuesday"
-msgstr "星期二"
 
 msgid "Tuner"
 msgstr "调谐器"
@@ -2294,6 +2303,11 @@ msgstr "天气雨"
 msgid "Weather Transparency"
 msgstr "天气透明度"
 
+#, fuzzy
+#| msgid "Weather Lines"
+msgid "Weather Wind Info Lines"
+msgstr "天气线"
+
 msgid "Weather Wind speed unit"
 msgstr "天气风速单位"
 
@@ -2329,9 +2343,6 @@ msgstr "WebIF刷新[s]"
 
 msgid "Wed"
 msgstr "周三"
-
-msgid "Wednesday"
-msgstr "星期三"
 
 msgid "Week"
 msgstr "周"
@@ -2408,6 +2419,8 @@ msgstr "复制到"
 msgid "cornflowerblue"
 msgstr "浅蓝色"
 
+#, fuzzy, python-format
+#| msgid "currently set : %s"
 msgid "currently set : %s"
 msgstr "当前设置：％s"
 
@@ -2824,3 +2837,60 @@ msgstr "是,很长"
 
 msgid "yes, short"
 msgstr "是,简短"
+
+#~ msgid "April"
+#~ msgstr "四月"
+
+#~ msgid "August"
+#~ msgstr "八月"
+
+#~ msgid "December"
+#~ msgstr "十二月"
+
+#~ msgid "February"
+#~ msgstr "二月"
+
+#~ msgid "Friday"
+#~ msgstr "星期五"
+
+#~ msgid "January"
+#~ msgstr "一月"
+
+#~ msgid "July"
+#~ msgstr "七月"
+
+#~ msgid "June"
+#~ msgstr "六月"
+
+#~ msgid "March"
+#~ msgstr "三月"
+
+#~ msgid "May"
+#~ msgstr "五月"
+
+#~ msgid "Monday"
+#~ msgstr "星期一"
+
+#~ msgid "November"
+#~ msgstr "十一月"
+
+#~ msgid "October"
+#~ msgstr "十月"
+
+#~ msgid "Saturday"
+#~ msgstr "星期六"
+
+#~ msgid "September"
+#~ msgstr "九月"
+
+#~ msgid "Sunday"
+#~ msgstr "星期日"
+
+#~ msgid "Thursday"
+#~ msgstr "星期四"
+
+#~ msgid "Tuesday"
+#~ msgstr "星期二"
+
+#~ msgid "Wednesday"
+#~ msgstr "星期三"
