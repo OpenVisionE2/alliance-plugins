@@ -18,7 +18,7 @@ from Plugins.Plugin import PluginDescriptor
 from Tools.Directories import fileExists
 from enigma import eTimer
 from os import path as os_path, listdir as os_listdir
-from Components.Console import Console 
+from Components.Console import Console
 
 model = BoxInfo.getItem("model")
 platform = BoxInfo.getItem("platform")
