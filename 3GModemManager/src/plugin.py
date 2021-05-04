@@ -1123,7 +1123,7 @@ class ModemManager(Screen):
 		return lv_usb_items
 
 	def getUSBList(self):
-		kernel_ver = BoxInfo.getItem("kernelfile")
+		kernel_ver = BoxInfo.getItem("kernel")
 		if kernel_ver <= "3.0.0":
 			cmd = "cat /proc/bus/usb/devices"
 		else:
